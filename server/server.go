@@ -22,7 +22,7 @@ func Run() error {
 	var history = server.Group("/history")
 	var notify = server.Group("/notify")
 
-	user.GET("/login", router.LoginHandler)
+	user.POST("/login", router.LoginHandler)
 	user.GET("/register", router.RegisterHandler)
 
 	dishes.GET("/get", router.GetDishes)
