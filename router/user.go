@@ -1,14 +1,13 @@
 package router
 
 import (
-	"encoding/json"
 	"net/http"
 	"time"
 
 	"github.com/labstack/echo/v4"
 )
 
-func (r *Router) LoginHandler(ctx echo.Context) (err error) {
+func (r *Router) LoginHandler(ctx echo.Context) error {
 
 	// Simulate successful login (replace with actual authentication logic)
 	userMap := map[string]interface{}{
@@ -18,9 +17,9 @@ func (r *Router) LoginHandler(ctx echo.Context) (err error) {
 		"photo":     "https://media.istockphoto.com/id/639805094/photo/happy-man.jpg?s=612x612&w=0&k=20&c=REx0Usczge4a0soQvp7fQgGCcFMHeORGUTpOIPW-IYA=", // Placeholder, replace with actual photo URL (optional)
 		"email":     "danielvieira2828@gmail.com",
 		"token":     "your-generated-token", // Replace with actual token
-		"height":    175.0,                  // Placeholder, replace with actual height (optional)
-		"weight":    70.0,                   // Placeholder, replace with actual weight (optional)
-		"imc":       10,                     // Replace with actual IMC calculation
+		"height":    175.05,                 // Placeholder, replace with actual height (optional)
+		"weight":    70.05,                  // Placeholder, replace with actual weight (optional)
+		"imc":       10.05,                  // Replace with actual IMC calculation
 		"sex":       "male",                 // Placeholder, replace with actual sex (optional)
 		"goals": map[string]bool{
 			"gainMuscularMass": false, // Placeholder, adjust based on user's goals (optional)
@@ -32,16 +31,10 @@ func (r *Router) LoginHandler(ctx echo.Context) (err error) {
 		"updatedAt": time.Now().Format(time.RFC3339Nano),
 	}
 
-	// Encode user model to JSON
-	userJSON, err := json.Marshal(userMap)
-	if err != nil {
-		return echo.NewHTTPError(http.StatusInternalServerError, "Error encoding user to JSON: "+err.Error())
-	}
-
-	return ctx.JSON(http.StatusOK, userJSON)
+	print(userMap)
+	return ctx.JSON(http.StatusOK, userMap)
 }
 
 func (r *Router) RegisterHandler(ctx echo.Context) error {
-
 	return ctx.JSON(http.StatusOK, "Você deve retornar o UUID gerado pelo consumer")
 }

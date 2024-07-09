@@ -29,6 +29,7 @@ func Run() error {
 	dishes.GET("/create", router.CreateDish)
 	dishes.GET("/update", router.UpdateDish)
 	dishes.GET("/delete", router.DeleteDish)
+	dishes.GET("/get/ingredients", router.GetIngredients)
 
 	routines.GET("/get", router.GetRoutines)
 	routines.GET("/update", router.UpdateRoutine)
