@@ -20,13 +20,13 @@ func (r *Router) LoginHandler(ctx echo.Context) error {
 		"height":    175.05,                 // Placeholder, replace with actual height (optional)
 		"weight":    70.05,                  // Placeholder, replace with actual weight (optional)
 		"imc":       10.05,                  // Replace with actual IMC calculation
-		"sex":       "male",                 // Placeholder, replace with actual sex (optional)
+		"sex":       "MALE",                 // Placeholder, replace with actual sex (optional)
 		"goals": map[string]bool{
 			"gainMuscularMass": false, // Placeholder, adjust based on user's goals (optional)
 			"maintainHealth":   true,  // Placeholder, adjust based on user's goals (optional)
 			"loseWeight":       false, // Placeholder, adjust based on user's goals (optional)
 		},
-		"biotype":   "endomorph", // Placeholder, replace with actual biotype (optional)
+		"biotype":   "ENDOMORPH", // Placeholder, replace with actual biotype (optional)
 		"createdAt": time.Now().Format(time.RFC3339Nano),
 		"updatedAt": time.Now().Format(time.RFC3339Nano),
 	}
