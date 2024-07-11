@@ -21,6 +21,9 @@ func Run() error {
 	var routines = server.Group("/routines")
 	var history = server.Group("/history")
 	var notify = server.Group("/notify")
+	var home = server.Group("/home")
+
+	home.GET("/homeData", router.GetHomeData)
 
 	user.POST("/login", router.LoginHandler)
 	user.GET("/register", router.RegisterHandler)
@@ -32,6 +35,7 @@ func Run() error {
 	dishes.GET("/get/ingredients", router.GetIngredients)
 
 	routines.GET("/get", router.GetRoutines)
+	routines.GET("/getOnUse", router.GetOnUseRoutines)
 	routines.GET("/update", router.UpdateRoutine)
 	routines.GET("/create", router.CreateRoutine)
 	routines.GET("/delete", router.DeleteRoutine)
