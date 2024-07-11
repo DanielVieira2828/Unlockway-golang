@@ -14,7 +14,7 @@ func (r *Router) GetDishes(ctx echo.Context) error {
 			"name":              "Grilled Chicken Salad",
 			"photo":             "https://assets.epicurious.com/photos/64a845e67799ee8651e4fb8f/16:9/w_6815,h_3833,c_limit/AshaGrilledChickenSalad_RECIPE_070523_56498.jpg",
 			"description":       "A healthy grilled chicken salad with fresh vegetables.",
-			"category":          "Almoço",
+			"category":          "LUNCH",
 			"preparationMethod": "Grill the chicken and mix with fresh vegetables.",
 			"ingredients": []map[string]interface{}{
 				{"id": "ingredient-uuid-1", "name": "Chicken Breast", "measure": "GRAMS", "amount": 200.05},
@@ -32,7 +32,7 @@ func (r *Router) GetDishes(ctx echo.Context) error {
 			"name":              "Vegetable Stir Fry",
 			"photo":             "https://www.wholesomeyum.com/wp-content/uploads/2020/11/wholesomeyum-Stir-Fry-Vegetables-15.jpg",
 			"description":       "A delicious vegetable stir fry with a mix of fresh vegetables.",
-			"category":          "Jantar",
+			"category":          "DINNER",
 			"preparationMethod": "Stir fry the vegetables with soy sauce.",
 			"ingredients": []map[string]interface{}{
 				{"id": "ingredient-uuid-6", "name": "Bell Pepper", "measure": "GRAMS", "amount": 100.0},
