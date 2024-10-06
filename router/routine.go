@@ -111,7 +111,7 @@ func (r *Router) GetOnUseRoutines(ctx echo.Context) error {
 				"photo":         "https://i0.wp.com/mercadoeconsumo.com.br/wp-content/uploads/2019/04/Que-comida-saud%C3%A1vel-que-nada-brasileiro-gosta-de-fast-food.jpg?fit=1600%2C1067&ssl=1",
 				"name":          "Grilled Chicken Salad",
 				"description":   "A healthy grilled chicken salad with fresh vegetables.",
-				"category":      "Salad",
+				"category":      "BREAKFAST",
 				"totalCalories": 200.05,
 			},
 			{
@@ -121,7 +121,7 @@ func (r *Router) GetOnUseRoutines(ctx echo.Context) error {
 				"photo":         "https://i0.wp.com/mercadoeconsumo.com.br/wp-content/uploads/2019/04/Que-comida-saud%C3%A1vel-que-nada-brasileiro-gosta-de-fast-food.jpg?fit=1600%2C1067&ssl=1",
 				"name":          "Quinoa Salad",
 				"description":   "A nutritious quinoa salad with mixed vegetables.",
-				"category":      "Salad",
+				"category":      "LUNCH",
 				"totalCalories": 350.05,
 			},
 		},

@@ -24,6 +24,7 @@ func Run() error {
 	var home = server.Group("/home")
 
 	home.GET("/homeData", router.GetHomeData)
+	home.GET("/nutriHomeData", router.GetNutriHomeData)
 
 	user.POST("/login", router.LoginHandler)
 	user.GET("/register", router.RegisterHandler)
